@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mario Prueba</title>
+	<link rel="stylesheet" type="text/css" href="mario.css">
+	<link rel="stylesheet" type="text/css" href="mario.js">
+	<script type="text/javascript" src="mario.js"></script>
+	<meta charset="utf-8">
+</head>
+<body>
+<div id="escenario">
+	<div id="mario"><img src="ico/mario.ico"></div>
+	<div id="muro" >
+		<img src="muro.jpg">
+	</div>
+	<div id="block"><img src="ico/block.ico"></div>
+	<div id="exclama"><img src="ico/exclamacion.ico"></div>
+	<div id="start"><img src="ico/star.ico"></div>
+	<div id="coin"><img src="ico/coin.gif"></div>
+	<script type="text/javascript">
+			$("div#muro.css" ).clone().appendTo( "div#muro2.css" );
+			clone.style.left = "130px";
+			clone.style.top = "325px";
+	</script>
+	<script type="text/javascript">
+		$(document).keydown(function(event) {
+		 		$personaje = $("#mario");
+		  		cant = 10;
+		   		switch(event.which){
+		 			case 37: //izq
+		 				console.log("mover izq");
+		 				$personaje.css("left", $personaje.offset().left - cant);
+		 			break;
+		 			case 38: //arriba
+		  				console.log("mover arriba");
+		  				$personaje.css("top", $personaje.offset().top - cant);
+		  			break;
+		  			case 39: //derecha
+		  				console.log("mover derecha");
+		  				$personaje.css("left", $personaje.offset().left + cant);
+		  			break;
+		  			case 40: //abajo
+		  				console.log("mover abajo");
+		  				$personaje.css("top", $personaje.offset().top + cant);
+		  			break;
+		  			default: event.preventDefault();
+		 		}
+		  	});
+		</script>
+</div>
+</body>
+</html>
